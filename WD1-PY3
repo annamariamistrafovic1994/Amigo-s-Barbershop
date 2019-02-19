@@ -10,13 +10,13 @@
 </head>
 
 <body>
-<h1><i>FAKEBOOK</i></h1>
+<h1 style="background-color: Violet"><i>FAKEBOOK</i></h1>
 Search: <input type="text" placeholder="Search by name">
 
 <br>
 
 <h2>Anna Maria Mistrafovic</h2>
-<img src="IMG-20171126-WA0003.jpg" alt="My test image" height="200" width="150">
+<img src="IMG-20171126-WA0003.jpg" alt="My test image" height="200" width="100">
 <br>
 <br>
 
@@ -24,9 +24,11 @@ Search: <input type="text" placeholder="Search by name">
 <br>
 
 <p><strong>City: </strong>Zagreb</p>
-<p><strong>Age: </strong>24</p>
-<p><strong>Education: </strong>Not educated</p>
-<p><strong>Hobby: </strong>Eating</p>
+<p style="color:blue"><strong>Age: </strong>24</p>
+<p style="color:red"><strong>Education: </strong>Not educated</p>
+<p style="font-size: 50px"><strong>Hobby: </strong>Eating</p>
 <p><strong>Favorite PS game: </strong>Crash Bandicoot</p>
+<p><strong>My favorite game is </strong><del>PES</del> <ins>Crash Bandicoot</ins></p>
+
 </body>
 </html>
