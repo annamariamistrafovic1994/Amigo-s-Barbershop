@@ -1,12 +1,16 @@
 <!DOCTYPE>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
 <title>Amigo's Barbershop</title>
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
-<body>
+<body> <style type="text/css">
+   body { background: #D3D3D3 !important; } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
+</style>
+</body>
 
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -16,7 +20,7 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav mr-auto min-height-100">
       <li class="nav-item active">
         <a class="nav-link" href="#">Our services <span class="sr-only">(current)</span></a>
       </li>
@@ -40,19 +44,43 @@
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+     <button type="button" class="btn btn-dark">Dark</button>
     </form>
   </div>
 </nav>
 
+<div class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
   </ol>
+
+
+
   <div class="carousel-inner">
-    <div class="carousel-item active">
+    <div class="carousel-item active height-300px">
       <img src="MUSTACHEE.jpg" class="d-block w-30 h-30 m-auto" alt="Responsive image">
     </div>
     <div class="carousel-item">
@@ -71,23 +99,45 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+-->
 
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="BARBER_RAZOR.jpg" style="width: 50px;" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item active">
+      <img src="Barber_ciko.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item active">
+      <img src="MUSTACHEE.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
 
  <h1 class="text-center">Make an appointment</h1>
 <div class="container">
   <div class="row">
     <div class="col-md-4">
                 <div class="card">
-                    <img src="Barber čiko.jpg" class="card-img-top" alt="...">
+                    <img src="RAZOR IN HAND.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title text-center">Hair</h5>
+                        <h5 class="card-title text-center width-100px">Hair</h5>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-4">
                 <div class="card">
-                    <img src="RAZOR IN HAND.jpg" class="card-img-top" alt="...">
+                    <img src="Barber čiko.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title text-center">Beard</h5>
                     </div>
@@ -103,7 +153,6 @@
                 </div>
             </div>
         </div>
-    </div>
 
 
 
@@ -142,8 +191,6 @@
                 </table>
                 <p>* We don't work on holidays.</p>
             </div>
-        </div>
-    </div>
 
 <div class="container mt-4" id="appointment">
         <h2 class="text-center">Make an appointment</h2>
@@ -171,21 +218,17 @@
             <div class="card">
                 <div class="card-header" id="headingOne">
                     <h2 class="mb-0">
-                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Do you have gift certificates?
-                        </button>
+                       <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            What is the procedure for making an appointment?>
+
+                       </button>
                     </h2>
                 </div>
 
                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                     <div class="card-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
-                        3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
-                        laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
-                        coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes
-                        anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-                        occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't
-                        heard of them accusamus labore sustainable VHS.
+                        Dear Guest,
+                        You should call or e-mai us at least 3-7 days before the planned appointment. We are facing a big demand for our services, so the appointment should be made on time.
                     </div>
                 </div>
             </div>
@@ -193,19 +236,13 @@
                 <div class="card-header" id="headingTwo">
                     <h2 class="mb-0">
                         <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Can I bring my pet along?
+                           Do I have to wash my hair/beard before?
                         </button>
                     </h2>
                 </div>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                     <div class="card-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
-                        3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
-                        laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
-                        coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes
-                        anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings oc
-                        caecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't hear
-                        d of them accusamus labore sustainable VHS.
+                        As you wish! if you feel comfortable with washing it at our place, we will provide you with this service. Also, feel free to do it on your own if you like it so.
                     </div>
                 </div>
             </div>
@@ -213,19 +250,14 @@
                 <div class="card-header" id="headingThree">
                     <h2 class="mb-0">
                         <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            What awards have you received so far?
+                           Do I get a free drink when using you hair/beard/mustache services?
                         </button>
                     </h2>
                 </div>
                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                     <div class="card-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
-                        3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt lab
-                        orum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffe
-                        e nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson
-                        cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat cra
-                        ft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them ac
-                        cusamus labore sustainable VHS.
+                        Yes Sir,
+                        free drink is always included in the service price. You can choose between few sorts of whiskey, coffee, juice, tea or beer.
                     </div>
                 </div>
             </div>
@@ -241,15 +273,15 @@
             <div class="col-md-4 offset-md-1">
                 <h3>Contact</h3>
 
-                <p>SmartNinja Hair Salon<br>
-                Tax number: 31421423423<br>
-                Hairy street 22<br>
-                Phone: 3432/124 343 3243<br>
-                Email: smartninja@hairsalon.me</p>
+                <p>Amigo's Barbershop<br>
+                Tax number: 1268741254<br>
+                Kašinska 27a<br>
+                Phone: 01/2006 222<br>
+                Email: amigos.barbershop@gmail.com</p>
             </div>
 
             <div class="col-md-4">
-                <img class="img-fluid" width="200px" src="https://storage.googleapis.com/smartninja-org-assets/curriculums/wd1/img/hairsalon-footer.jpg">
+                <img class="img-fluid" width="200px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0UctHWcEGKdrbrsiVwmSN2sRAeCX_SJPqr3FFOEZ9Y3YVypcj">
             </div>
 
             <div class="col-md-3">
@@ -262,11 +294,14 @@
                     <li><a href="#about" data-toggle="modal" data-target="#aboutModal">About us</a></li>
                 </ul>
             </div>
-        </div>
+
+    </div>
     </footer>
 
 
 
+       </div>
+    </div>
+     </div>
 
-</body>
 </html>
